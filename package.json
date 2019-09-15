@@ -1,0 +1,30 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papelnaranja/matrimonio.git"
+  },
+  "author": "Vanessa frenkel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papelnaranja/matrimonio/issues"
+  },
+  "homepage": "https://github.com/papelnaranja/matrimonio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "grunt-postcss": "^0.9.0",
+    "pixrem": "^5.0.0"
+  }
+}

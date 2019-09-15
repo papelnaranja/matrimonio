@@ -1,0 +1,98 @@
+// Vars For Better
+
+
+// Colors
+$primary:#1AC6D3;
+//$complement:;
+$dark:#5d5d5d;
+
+//sizes
+$h2-size: 20px;
+$padding-xs: 7.5px;
+$padding-sm: 15px;
+$padding-md: 30px;
+$padding-lg: 50px;
+
+
+// prefixer
+
+$prefixes: "webkit", "moz", "ms", "o", "none";
+@mixin prefix($property, $arguments) {
+ @each $prefix in $prefixes {
+   @if $prefix == "none" {
+     #{$property}: $arguments;
+   } @else {
+     -#{$prefix}-#{$property}: $arguments;
+   } 
+ }
+}
+
+//Screen sizes
+$screen-extra-small: 320px;
+//bootstraps 4 breaks point - 
+$screen-small: 576px;
+$screen-middle: 768px;
+$screen-large: 992px;
+$screen-extralarge: 1200px;
+
+$element-size-sm: 1em;
+$element-size-md: 1.5em;
+$element-size-lg: 2em;
+$element-size-xl: 4em; 
+
+// Extra Small devices (landscape phones, 320 and up)
+@mixin min-xs {
+    @media (min-width: $screen-extra-small) {
+        @content;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin min-sm {
+    @media (min-width: $screen-small) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin min-md {
+    @media (min-width: $screen-middle) {
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin min-lg {
+    @media (min-width: $screen-large) {
+        @content;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin min-xl {
+    @media (min-width: $screen-extralarge) {
+        @content;
+    }
+}
+
+// special size 
+@mixin min-sp {
+    @media (min-width: 993px) {
+        @content;
+    }
+}
+
+@mixin ie {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    @content;
+
+    }
+}
+// custom 
+@mixin min-custom($custom) {
+    @media (min-width: $custom) {
+        @content;
+    }
+}
+
